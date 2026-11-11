@@ -8,7 +8,4 @@ packages:
   - name: audit_helper
     package: dbt-labs/audit_helper
     version: 0.14.0
-  - name: dbt_facebook_ads
-    package: windsor-ai/dbt_facebook_ads
-    version: 0.0.2
-sha1_hash: d7e5a9ccfe3bddbd083e7dedb2a6cfe57c938984
+sha1_hash: 64e8791cc38427de8565c71eb2c78de7c5c70346

@@ -38,6 +38,10 @@ models:
       +tags:
         - powerbi
         - report
+      analytics:
+        stablecoin_activity_per_day:
+          +post-hook:
+            - "{{ create_latest_version_view() }}"
     # Config indicated by + and applies to all files under models/example/
     # example:
     #   +materialized: view

@@ -1,0 +1,17 @@
+select
+t.from_address,
+c.bytecode,
+count(c.bytecode) bytecode_count
+
+from {{ref('stg_transactions_enriched')}} t
+
+left join {{ref('stg_contracts')}} c 
+on t.receipt_contract_address = c.address
+
+where t.transaction_category='contract_creation'
+and c.bytecode is not null
+
+group by 1,2
+
+-- 0x80d04079ffc53eb14edbeeb37279d126f45552df
+-- 0x91355870a334ffc33e84503327773259e3030366
