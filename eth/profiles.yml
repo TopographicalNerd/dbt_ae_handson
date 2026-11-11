@@ -1,0 +1,21 @@
+# 1_setup/ds_training/profiles.ymlからコピペ
+
+eth:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: ar29333.ap-northeast-1.aws
+      role: FR_TRAINEE
+      database: "{{ env_var('DATABASE_NAME') }}"
+      warehouse: "{{ env_var('WAREHOUSE_NAME') }}"
+      schema: "{{ env_var('USER_SCHEMA_PREFIX') }}"
+      connect_timeout: 60
+      threads: 16
+      user: "{{ env_var('USER_NAME') }}"
+      # キーペア認証の場合
+      private_key_path: "{{ env_var('PRIVATE_KEY_PATH') }}"
+      # 秘密鍵を暗号化している場合は以下のコメントを解除（トラブルシュート参照）
+      # private_key_passphrase: "{{ env_var('PRIVATE_KEY_PASSPHRASE') }}"
+      # password認証の場合
+      # password: hogehoge

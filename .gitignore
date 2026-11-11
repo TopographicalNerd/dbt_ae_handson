@@ -1,0 +1,7 @@
+.env
+**/logs/
+**/target/
+**/dbt_packages/
+.user.yml
+.venv/
+venv/
