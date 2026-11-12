@@ -26,8 +26,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
-flags:
-  fail-fast: true
+# flags:
+#   fail-fast: true
 
 models:
   eth:
@@ -57,3 +57,5 @@ vars:
 dispatch:
   - macro_namespace: dbt_utils
     search_order: ['eth', 'dbt_utils']
+
+restrict-access: True
